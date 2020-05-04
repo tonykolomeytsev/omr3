@@ -1,0 +1,36 @@
+\chapter{\MakeUppercase{Построение асимптотического наблюдателя}}
+
+Построим асимптотический наблюдатель для оценки вектора состояния:
+$$
+\dot{\hat{x}}=A \hat{x} + b u + L(y - C \hat{x}) 
+$$
+
+\noindent где $ L = \begin{bmatrix} l_1 \\ l_2 \end{bmatrix} $ -- ассимптотический наблюдатель.
+
+\noindent Асимптотическая устойчивость уравнения ошибки:
+\begin{align*}
+    &\dot{\tilde{x}}=(A-Lc)\tilde{x} \\
+    &\tilde{x} = x - \hat{x} \\
+    &A-Lc = \begin{bmatrix} -1 & -1 \\ 0 & 1 \end{bmatrix} - \begin{bmatrix} l_1 \\ l_2 \end{bmatrix} \begin{bmatrix} 1 & 1 \end{bmatrix} = 
+        \begin{bmatrix}
+         -l_1-1 & -l_1-1 \\
+         -l_2 & 1-l_2
+        \end{bmatrix}
+\end{align*}
+
+\noindent Исследуем устойчивость по характеристическому полиному:
+\begin{align*}
+    &| \lambda E - (A-Lc) | = \begin{vmatrix}
+        1+\lambda+l_1 & 1 + l_1 \\
+        l_2 & -1 + \lambda + l_2
+    \end{vmatrix} = \\
+    & = \lambda^2 + \lambda  \left(l_1+l_2\right)-l_1-1 = 0
+\end{align*}
+
+\noindent Необходимые и достаточные условия устойчивости:
+\begin{align*}
+    &l_1 < -1 \\
+    &l_2 > -l_1
+\end{align*}
+
+
