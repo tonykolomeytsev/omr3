@@ -93,13 +93,14 @@ J_2=\int^{\infty}_0 (x^T Qx+u^2) dt \rightarrow min, \; Q = \begin{bmatrix}
 \end{bmatrix}
 $$
 
-Решим уравнение Рикатти $ PA - A^T P - PBB^T P + Q = 0 $ с помощью математического пакета \textit{Wolfram Mathematica}. Код программы см. в приложении.
+Решим уравнение Рикатти $ PA - A^T P - PBB^T P + Q = 0 $ с помощью математического пакета \textit{Wolfram Mathematica}. Код программы см. в приложении А.
 
-Решение $ P = \begin{bmatrix} 2 & 1 \\ 1 & 3 \end{bmatrix} $, тогда $ k $:
+Решение $ P = \begin{bmatrix} 2 & 1 \\ 1 & 3 \end{bmatrix} $, тогда:
 \begin{align*}
-    &k_opt = \begin{bmatrix}
+    &k_{opt} = \begin{bmatrix}
         1 & 3
     \end{bmatrix} \\
-    &u_opt = -1x_1 -3x_2
+    &u_{opt} = -1x_1 -3x_2
 \end{align*}
 
+\noindent Определитель $ \det P = 5 > 0 $, следовательно проверять ассимптотическую устойчивость не нужно.
