@@ -1,0 +1,66 @@
+\chapter{\MakeUppercase{Решение задачи модальной стабилизации системы}}
+
+Так как система вполне управляема и $ m = 1 $, то решение найдем по формуле Аккермана:
+\begin{align*}
+    &u=-kx, \; \\ &k=e^T_2 \mathbb{C}^{-1}(A,b)p_d(A) \\
+    &\mathbb{C}^{-1}(A,b) = \frac1{\det\mathbb{C}} \mathbb{C}^T_* = \begin{bmatrix}
+        1 & 1 \\ -1 & 0
+    \end{bmatrix} \\
+    &e^T_2 \mathbb{C}^{-1} = \begin{bmatrix}
+        -1 & 0
+    \end{bmatrix} \\
+    &p_d(A) = (A + 1 E)^2 = \left(\begin{bmatrix}
+        -1 & -1 \\ 0 & 1
+    \end{bmatrix} + \begin{bmatrix}
+        1 & 0 \\ 0 & 1
+    \end{bmatrix}\right)^2 = \\
+    &= \begin{bmatrix}
+        0 & -1 \\ 0 & 2
+    \end{bmatrix} ^2 = \begin{bmatrix}
+        0 & -2 \\ 0 & 4
+    \end{bmatrix}
+\end{align*}
+
+\noindent Теперь подставим все значения в $ k $:
+\begin{align*}
+    &k=e^T_2 \mathbb{C}^{-1}(A,b)p_d(A) = 
+    \begin{bmatrix}
+        0 & 1
+    \end{bmatrix} \begin{bmatrix}
+        1 & 1 \\ -1 & 0
+    \end{bmatrix} \begin{bmatrix}
+        0 & -2 \\ 0 & 4
+    \end{bmatrix} = \begin{bmatrix}
+        0 & 2
+    \end{bmatrix}
+\end{align*}
+
+\noindent Тогда закон управления:
+$$ u = -kx = -2x_2 + 0x_1 $$
+
+\textbf{Выполним проверку}
+
+При $ u=-kx $ уравнения состояния имеют вид:
+$$ \dot{x}=Ax+bu=Ax-bkx=(A-bk)x $$
+
+\noindent Заново вычислим характеристический полином системы:
+\begin{align*}
+    &A-bk = \begin{bmatrix}
+        -1 & -1 \\ 0 & 1
+    \end{bmatrix} - \begin{bmatrix}
+        0 \\ 1 
+    \end{bmatrix} \begin{bmatrix}
+        0 & 2
+    \end{bmatrix} = \begin{bmatrix}
+        -1 & -1 \\ 0 & 1
+    \end{bmatrix} - \begin{bmatrix}
+        0 & 0 \\ 0 & 2 
+    \end{bmatrix} = \begin{bmatrix}
+        -1 & -1 \\ 0 & -1
+    \end{bmatrix} \\
+    &| \lambda E - (A-bk) | = \begin{vmatrix}
+        1+\lambda & 1 \\ 0 & 1+\lambda
+    \end{vmatrix} = (\lambda + 1)^2 = p_d(\lambda)
+\end{align*}
+
+\noindent Ч.т.д.

@@ -1,0 +1,94 @@
+\chapter{\MakeUppercase{Решение линейно-квадратичной задачи оптимального управления}}
+
+Решим линейно-квадратичную задачу оптимального управления объектом (1) с критерием качества:
+$$
+J_1=\int^{\infty}_0 u^2 dt \rightarrow min
+$$
+
+\noindent Система вполне управляема. Оптимальное управление имеет вид:
+\begin{align*}
+    &u=-kx \\
+    &k=B^T P
+\end{align*}
+
+\noindent где P-решение алгебраического уравнения Риккати. Ниже уравнение Рикатти:
+$$
+PA + A^T P - PBB^T P=0
+$$
+
+Пусть $ P = \begin{bmatrix} p_{11} & p_{12} \\ p_{21} & p_{22} \end{bmatrix} $, тогда:
+\begin{align*}
+    &PA = \begin{bmatrix}
+        -p_{11} & -p_{11}+p_{12} \\ -p_{21} & -p_{21}+p_{22}
+    \end{bmatrix} \\
+    & A^T P = (PA)^T = \begin{bmatrix}
+        -p_{11} & -p_{21} \\ -p_{11}+p_{12} & -p_{21}+p_{22}
+    \end{bmatrix} \\
+    &PB = \begin{bmatrix} p_{11} & p_{12} \\ p_{21} & p_{22} \end{bmatrix} \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} p_{12} \\ p_{22} \end{bmatrix} \\
+    &B^T P=\begin{bmatrix} p_{12} & p_{22} \end{bmatrix} \\
+    &PBB^T P = \begin{bmatrix} p_{12}^2 & p_{12}p_{22} \\ p_{12}p_{22} & p_{22}^2 \end{bmatrix}
+\end{align*}
+
+\noindent Полученное уравнение Рикатти:
+$$
+    \begin{bmatrix}
+        -p_{11} & -p_{11}+p_{12} \\ -p_{21} & -p_{21}+p_{22}
+    \end{bmatrix} + \begin{bmatrix}
+        -p_{11} & -p_{21} \\ -p_{11}+p_{12} & -p_{21}+p_{22}
+    \end{bmatrix} - \begin{bmatrix} p_{12}^2 & p_{12}p_{22} \\ p_{12}p_{22} & p_{22}^2 \end{bmatrix}
+$$
+\noindent поэлементная запись которого выглядит следующим образом:
+$$
+    \begin{cases}
+        -p_{12}^2-2 p_{11} = 0 \\
+        -2 p_{21}-\left(p_{22}-2\right) p_{22} = 0 \\
+        -p_{11}-p_{21}-p_{12} \left(p_{22}-1\right) = 0
+    \end{cases}
+$$
+
+\noindent Решая систему уравнений получим следующие значения: $ p_{11}= 0, p_{12} = 0,p_{22} = 2 $, и значит матрица $ P $ выглядит следующим образом:
+$$ 
+P = \begin{bmatrix}
+ 0 & 0 \\
+ 0 & 2 \\
+\end{bmatrix}
+$$
+
+\noindent Определитель $ \det P = 0 $, позже проверим ассимптотическую устойчивость. Составим оптимальное уравнение:
+\begin{align*}
+    &k=B^T P = \begin{bmatrix}
+        0 & 2
+    \end{bmatrix} \\
+    &U_{opt}=0x_1+2x_2
+\end{align*}
+
+\textbf{Выполним проверку}
+
+При $ u=-kx $ уравнения состояния имеют вид:
+$$ \dot{x}=Ax+bu=Ax-bkx=(A-bk)x $$
+
+\noindent Заново вычислим характеристический полином системы:
+\begin{align*}
+    &A-bk = \begin{bmatrix}
+        -1 & -1 \\ 0 & 1
+    \end{bmatrix} - \begin{bmatrix}
+        0 \\ 1 
+    \end{bmatrix} \begin{bmatrix}
+        0 & 2
+    \end{bmatrix} =\begin{bmatrix}
+        -1 & -1 \\ 0 & -1
+    \end{bmatrix} \\
+    &| \lambda E - (A-bk) | = \begin{vmatrix}
+        1+\lambda & 1 \\ 0 & 1+\lambda
+    \end{vmatrix} = \lambda:2 + 2\lambda + 1
+\end{align*}
+
+\noindent по критерию Гурвица система с найденным управлением является ассимптотически утойчивой.
+
+
+Решим линейно-квадратичную задачу оптимального управления объектом (1) с критерием качества:
+$$
+J_2=\int^{\infty}_0 (x^T Qx+u^2) dt \rightarrow min
+$$
+
+

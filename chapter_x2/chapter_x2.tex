@@ -1,0 +1,39 @@
+\chapter{\MakeUppercase{ Исследование системы на управляемость и наблюдаемость }}
+\textbf{Проверка на управляемость}
+
+Так как матрицы $ A $ и $ b $ константны, можно использовать критерий Калмана:
+\begin{align*}
+    &\mathbb{C} (A, b) = [b | Ab] \\
+    &Ab =\begin{bmatrix}
+        -1 & -1 \\ 0 & 1
+    \end{bmatrix} \begin{bmatrix}
+        0 \\ 1
+    \end{bmatrix} = \begin{bmatrix}
+        -1 \\ 1
+    \end{bmatrix} \\
+    &\mathbb{C} (A, b) = \begin{bmatrix}
+        0 & -1 \\ 1 & 1
+    \end{bmatrix}
+\end{align*}
+\noindent Определитель матрицы Калмана: $ \det\mathbb{C} = 1 \neq 0 $. Определитель не равен нулю, а это значит ранг матрицы Калмана равен 2, следовательно система вполне управляема.
+
+\textbf{Проверка на наблюдаемость}
+
+Вектор измерений: $ y=cx $. Используем критерий Калмана для матриц $ A, c $, так как они константны:
+\begin{align*}
+    & \mathbb{O}(A, c) = \begin{bmatrix}
+        c \\ cA
+    \end{bmatrix} \\
+    & cA = \begin{bmatrix}
+        1 & 1
+    \end{bmatrix} \begin{bmatrix}
+        -1 & -1 \\ 0 & 1
+    \end{bmatrix} = \begin{bmatrix}
+        -1 & 0
+    \end{bmatrix} \\
+    & \mathbb{O}(A, c) = \begin{bmatrix}
+        1 & 1 \\
+        -1 & 0
+    \end{bmatrix}
+\end{align*}
+\noindent Значение определителя $ \det\mathbb{O} = 1 \neq 0 $/ Определитель не равен нулю, следовательно система вполне наблюдаема и можно точно оценить вектор состояния. 
