@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      6533,        209]
-NotebookOptionsPosition[      5262,        170]
-NotebookOutlinePosition[      5637,        186]
-CellTagsIndexPosition[      5594,        183]
+NotebookDataLength[      7394,        229]
+NotebookOptionsPosition[      5900,        185]
+NotebookOutlinePosition[      6274,        201]
+CellTagsIndexPosition[      6231,        198]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -65,10 +65,11 @@ Cell[BoxData[{
        RowBox[{"A", ",", "B"}], "}"}]}], ",", 
      RowBox[{"{", 
       RowBox[{"Q", ",", "R"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{"MatrixForm", "@", "P"}], "\[IndentingNewLine]"}], "Input",
+ RowBox[{"MatrixForm", "@", "P"}]}], "Input",
  CellChangeTimes->{{3.797598593538175*^9, 3.797598630422403*^9}, {
-  3.7975986759535913`*^9, 3.797598714033151*^9}, {3.7975987557120085`*^9, 
-  3.7975988091877775`*^9}},ExpressionUUID->"085c5c2e-502a-493a-99be-\
+   3.7975986759535913`*^9, 3.797598714033151*^9}, {3.7975987557120085`*^9, 
+   3.7975988091877775`*^9}, 
+   3.7976163394326057`*^9},ExpressionUUID->"085c5c2e-502a-493a-99be-\
 11515df6dbe9"],
 
 Cell[BoxData[
@@ -166,10 +167,24 @@ Cell[BoxData["4.999999999999985`"], "Output",
   3.797599106157465*^9, {3.7975991509943514`*^9, 
    3.797599161382713*^9}},ExpressionUUID->"a645e20e-4b70-480f-b17b-\
 26ca49ff4c81"]
-}, Open  ]]
+}, Open  ]],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True,ExpressionUUID->"90498f94-38ab-45de-bca2-232b9d7083ae"],
+
+Cell[TextData[StyleBox["\:041f\:0420\:0418\:041b\:041e\:0416\:0415\:041d\:0418\
+\:0415 \:0411\n\:041a\:043e\:043c\:043f\:044c\:044e\:0442\:0435\:0440\:043d\
+\:043e\:0435 \:043c\:043e\:0434\:0435\:043b\:0438\:0440\:043e\:0432\:0430\
+\:043d\:0438\:0435",
+ FontFamily->"Times New Roman",
+ FontSize->16,
+ FontWeight->"Bold"]], "Text",
+ CellChangeTimes->{{3.7975985100287404`*^9, 3.7975985362686853`*^9}, {
+  3.79761631694547*^9, 3.79761632470238*^9}},
+ TextAlignment->Center,ExpressionUUID->"d05bcf2d-62e5-497a-ad60-90dafb612599"]
 },
-WindowSize->{958, 978},
-WindowMargins->{{Automatic, 205}, {-29, Automatic}},
+WindowSize->{958, 925},
+WindowMargins->{{Automatic, 166}, {39, Automatic}},
 Magnification:>1.2 Inherited,
 FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (March 13, 2017)",
 StyleDefinitions->"Default.nb"
@@ -188,29 +203,34 @@ Notebook[{
 Cell[558, 20, 468, 8, 64, "Text", "ExpressionUUID" -> \
 "54d03338-e413-4cf7-b976-9d78c10d4c65"],
 Cell[CellGroupData[{
-Cell[1051, 32, 1235, 39, 323, "Input", "ExpressionUUID" -> \
+Cell[1051, 32, 1242, 40, 297, "Input", "ExpressionUUID" -> \
 "085c5c2e-502a-493a-99be-11515df6dbe9"],
-Cell[2289, 73, 805, 20, 71, "Output", "ExpressionUUID" -> \
+Cell[2296, 74, 805, 20, 71, "Output", "ExpressionUUID" -> \
 "3c8f2b55-1977-44c4-a623-3f112e9ebe87"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3131, 98, 246, 6, 39, "Input", "ExpressionUUID" -> \
+Cell[3138, 99, 246, 6, 39, "Input", "ExpressionUUID" -> \
 "20ef4b41-3c4c-4cd9-a0ef-58a5c9cf5110"],
-Cell[3380, 106, 314, 8, 37, "Output", "ExpressionUUID" -> \
+Cell[3387, 107, 314, 8, 37, "Output", "ExpressionUUID" -> \
 "3d208e2f-42e1-4232-9bc0-27a1c8dddd21"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3731, 119, 612, 18, 103, "Input", "ExpressionUUID" -> \
+Cell[3738, 120, 612, 18, 103, "Input", "ExpressionUUID" -> \
 "9f5facb9-eed8-49eb-b514-743aae9d5286"],
-Cell[4346, 139, 433, 12, 37, "Output", "ExpressionUUID" -> \
+Cell[4353, 140, 433, 12, 37, "Output", "ExpressionUUID" -> \
 "32c8811c-9860-406d-94b6-80195992583e"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4816, 156, 228, 5, 57, "Input", "ExpressionUUID" -> \
+Cell[4823, 157, 228, 5, 57, "Input", "ExpressionUUID" -> \
 "8d8b16b0-c433-4221-9d29-bbf6346ca035"],
-Cell[5047, 163, 199, 4, 37, "Output", "ExpressionUUID" -> \
+Cell[5054, 164, 199, 4, 37, "Output", "ExpressionUUID" -> \
 "a645e20e-4b70-480f-b17b-26ca49ff4c81"]
-}, Open  ]]
+}, Open  ]],
+Cell[5268, 171, 99, 1, 4, "PageBreak", "ExpressionUUID" -> \
+"90498f94-38ab-45de-bca2-232b9d7083ae",
+ PageBreakBelow->True],
+Cell[5370, 174, 526, 9, 64, "Text", "ExpressionUUID" -> \
+"d05bcf2d-62e5-497a-ad60-90dafb612599"]
 }
 ]
 *)
